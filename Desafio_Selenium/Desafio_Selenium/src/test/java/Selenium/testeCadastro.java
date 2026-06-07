@@ -108,26 +108,26 @@ public class testeCadastro extends baseTest {
     @Test // Limpar os campos do formulário de cadastro
     public void limparCamposCadastroPet() throws InterruptedException {
 
-    loginPage = new LoginPage(driver);
-    dashboardPage = new DashboardPage(driver);
-    cadastroPetPage = new CadastroPetPage(driver);
+        loginPage = new LoginPage(driver);
+        dashboardPage = new DashboardPage(driver);
+        cadastroPetPage = new CadastroPetPage(driver);
 
-    loginPage.realizarLogin("admin", "123456");
-    Thread.sleep(1000);
+        loginPage.realizarLogin("admin", "123456");
+        Thread.sleep(1000);
 
-    dashboardPage.abrirCadastroPet();
-    Thread.sleep(1000);
+        dashboardPage.abrirCadastroPet();
+        Thread.sleep(1000);
 
-    cadastroPetPage.preencherNomePet("Noah");
-    cadastroPetPage.preencherNomeDono("Douglas Jorge");
-    cadastroPetPage.selecionarEspecie("Cachorro 🐕");
-    cadastroPetPage.preencherIdade("5 anos");
-    cadastroPetPage.preencherObservacoes("Pet fofinho, super tranquilo");
-    cadastroPetPage.marcarVacinado();
-    Thread.sleep(1000);
+        cadastroPetPage.preencherNomePet("Noah");
+        cadastroPetPage.preencherNomeDono("Douglas Jorge");
+        cadastroPetPage.selecionarEspecie("Cachorro 🐕");
+        cadastroPetPage.preencherIdade("5 anos");
+        cadastroPetPage.preencherObservacoes("Pet fofinho, super tranquilo");
+        cadastroPetPage.marcarVacinado();
+        Thread.sleep(1000);
 
-    cadastroPetPage.limparFormulario();
-    Thread.sleep(1000);
+        cadastroPetPage.limparFormulario();
+        Thread.sleep(1000);
 
     }
 }

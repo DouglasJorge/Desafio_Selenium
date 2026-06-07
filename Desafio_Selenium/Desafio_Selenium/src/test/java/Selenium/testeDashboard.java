@@ -110,31 +110,30 @@ public class testeDashboard extends baseTest {
     public void validarMensagemAoClicarLoginLogado()
         throws InterruptedException {
 
-    loginPage = new LoginPage(driver);
-    dashboardPage = new DashboardPage(driver);
+        loginPage = new LoginPage(driver);
+        dashboardPage = new DashboardPage(driver);
 
-    loginPage.realizarLogin("admin", "123456");
-    Thread.sleep(1000);
+        loginPage.realizarLogin("admin", "123456");
+        Thread.sleep(1000);
 
-    dashboardPage.clicarLogin();
-    Thread.sleep(1000);
+        dashboardPage.clicarLogin();
+        Thread.sleep(1000);
 
-    Assert.assertEquals(
-    "ℹ️ Você já está logado. Para fazer login novamente, primeiro use \"Sair\".", dashboardPage.obterMensagemInformativa());
+        Assert.assertEquals(
+        "ℹ️ Você já está logado. Para fazer login novamente, primeiro use \"Sair\".", dashboardPage.obterMensagemInformativa());
     }
 
     @Test //Realizar logout
     public void realizarLogoutComSucesso() throws InterruptedException {
 
-    loginPage = new LoginPage(driver);
-    dashboardPage = new DashboardPage(driver);
-    loginPage.realizarLogin("admin", "123456");
-    Thread.sleep(1000);
+        loginPage = new LoginPage(driver);
+        dashboardPage = new DashboardPage(driver);
+        loginPage.realizarLogin("admin", "123456");
+        Thread.sleep(1000);
 
-    dashboardPage.clicarLogout();
+        dashboardPage.clicarLogout();
 
-    Assert.assertEquals(
-        "🔒 Deslogado",dashboardPage.obterStatusUsuario());
+        Assert.assertEquals("🔒 Deslogado",dashboardPage.obterStatusUsuario());
     }
 
 }
